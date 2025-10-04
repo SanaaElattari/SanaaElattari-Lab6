@@ -15,7 +15,7 @@ public  abstract class Thing {
         this.lab = l;
     }
 
-    public void rightTurn()  // where static methods
+    public void rightTurn() 
     { 
         dir = (dir + 1) % 4;
     }
@@ -38,6 +38,6 @@ public  abstract class Thing {
         return row + " " + col + " " + lab;
     }
 
-    public abstract void maybeTurn(Random rand); // double check this 
+    public abstract void maybeTurn(Random rand); 
 
 }
