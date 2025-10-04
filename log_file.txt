@@ -1,0 +1,30 @@
+commit 0688dd10e0f7daec5a26644f0220ed0b74816fe9
+Author: SanaaElattari <sanaaelattari2006@gmail.com>
+Date:   Sat Oct 4 12:59:52 2025 -0400
+
+     fix static word issue and upload UML file
+
+commit a3fe977f4635dc8210a3bd3ea3f2dd0ddbadb3e4
+Author: SanaaElattari <sanaaelattari2006@gmail.com>
+Date:   Sat Oct 4 12:50:47 2025 -0400
+
+     update DotChaser
+
+commit b7e6e1c781623004c1e6ec59b3ced31e0865d53c
+Author: SanaaElattari <sanaaelattari2006@gmail.com>
+Date:   Sat Oct 4 12:36:58 2025 -0400
+
+    Implement 5 classes
+
+commit be721ee1d228ef719c54cf35910be31960d5a33c
+Author: SanaaElattari <sanaaelattari2006@gmail.com>
+Date:   Sat Oct 4 11:58:21 2025 -0400
+
+    add 5 class files
+     and fix plotter file issue
+
+commit 2ee21f0f2fd454010884e5ddb5871db92d30abcc
+Author: SanaaElattari <sanaaelattari2006@gmail.com>
+Date:   Sat Oct 4 11:49:16 2025 -0400
+
+    add files
