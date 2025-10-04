@@ -1,5 +1,7 @@
 import java.util.*;
 
+//import org.w3c.dom.Node; // don't need anymore 
+
 public class DotChaser {
   public static Random rand = new Random(System.currentTimeMillis());
 
@@ -11,6 +13,7 @@ public class DotChaser {
    *
    * A STATIC CLASS? OH NO! GET IT OUT OF HERE!
    */
+   /* 
   public static class Thing {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
@@ -18,13 +21,14 @@ public class DotChaser {
     public char lab = 'r';
     public boolean isTypeB;
   }
-
+    */
   /**
    * YOU'LL NEED TO PUT THIS SOMEWHERE ELSE
    * HINT: WOULDN'T IT BE NICE TO HAVE A LIST OR QUEUE SO THAT
    *       WE DON'T HAVE TO USE NODES HERE?
    * This class is for linked lists of Thing's
    */
+  /* 
   public static class Node {
     public Thing data;
     public Node  next;
@@ -77,22 +81,24 @@ public class DotChaser {
     t.col += dc[t.dir];
   }
 
-  
+  */
   /**
    * This static method is ok :)
    */
   public static void main(String[] args) {
     int N = 200;
+    Random rand = new Random(System.currentTimeMillis());
 
     if( args.length != 0 )
       N = Integer.parseInt(args[0]);
 
     // INSTEAD OF A NODE, CREATE SOMETHING MORE USER-FRIENDLY.
-    Node L = null;
-    int count = 0;
+     ThingList list = new ThingList();
+     int count = 0;
 
     while( true ) {
       // Every N rounds, add another typeA and typeB Thing.
+      /* 
       if( count % N == 0 ) {
 
         // Add a typeA thing to the list.
@@ -116,23 +122,36 @@ public class DotChaser {
         nB.next = L;
         L       = nB;
       }
-
+      */
       // Print out each thing.
       // (SEEMS LIKE A NICE PRINTALL() METHOD CALL WOULD WORK HERE)
       // (SEEMS LIKE A toString() METHOD IN THE CLASS WOULD ALSO BE NICE)
-      for( Node T = L; T != null; T = T.next )
-        System.out.println(T.data.row + " " + T.data.col + " " + T.data.lab);
+      //for( Node T = L; T != null; T = T.next )
+        //System.out.println(T.data.row + " " + T.data.col + " " + T.data.lab);
 
-      System.out.println("done");
-      System.out.flush();
+      //System.out.println("done");
+      //System.out.flush();
 
       // Move each thing.
       // (SEEMS LIKE A NICE MOVEALL() METHOD CALL WOULD WORK HERE)
-      for( Node T = L; T != null; T = T.next ) {
-        maybeTurn(T.data);
-        step(T.data);
-      }
-      count++;
+      //for( Node T = L; T != null; T = T.next ) {
+        //maybeTurn(T.data);
+        //step(T.data);
+      //}
+      //count++;
+      if (count % N == 0) // add new things 
+        {
+        // Add TypeA (red)
+        list.addThing(new TypeA(45, 50, 'r', 0));
+        // Add TypeB (blue)
+        list.addThing(new TypeB(55, 50, 'b', 0));
+        // Add TypeC (yellow)
+        list.addThing(new TypeC(50, 45, 'y', 0));
+
+        list.printAll();  // print
+        list.moveAll(rand); // move
+        count++; // increment count
+        }
     }
-  }
+ }
 }
